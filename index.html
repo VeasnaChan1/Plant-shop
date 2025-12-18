@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant shop</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <script src="./js/main.js"></script>
+     <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="font-serif">
+    <!-- header -->
+    <header class="bg-green-300 flex justify-between items-center px-8 py-4 shadow-lg">
+        <!-- menu button (mobile) -->
+        <button id="menuBtn" class="md:hidden text-2xl hover:opacity-70 transition">
+            <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- logo -->
+        <div class="w-24">
+            <img src="./image/banner/logo.png" alt="logo of the shop" class="w-full h-auto">
+        </div>
+
+        <!-- search bar -->
+        <div class="flex-1 mx-8 max-w-md w-1/2">
+            <input type="text" placeholder="Search for plants..." class="w-full px-4 py-2 rounded-md border-2 border-black focus:outline-none focus:ring-2 py-3 px-3 text-sm">
+        </div>
+
+        <!-- navigation icons -->
+        <div class="flex gap-6 text-xl">
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- mobile dropdown menu -->
+    <div id="dropdownMenu" class="hidden md:hidden bg-white shadow-lg">
+        <ul class="flex flex-col gap-0">
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Holidays/Gifts</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Plants Kit</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Best Selling</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition">Plants Tips</a></li>
+        </ul>
+    </div>
+
+    <!-- navigation bar (desktop) -->
+    <section class="hidden md:block">
+      <nav>
+        <ul class="flex justify-center gap-8 bg-gray-200 py-4 shadow-md">
+            <li><a href="#" class="hover:text-green-700 transition">Holidays/Gifts</a></li>
+            <li><a href="#" class="hover:text-green-700 transition">Plants Kit</a></li>
+            <li><a href="#" class="hover:text-green-700 transition">Best Selling</a></li>
+            <li><a href="#" class="hover:text-green-700 transition">Plants Tips</a></li>
+        </ul>
+      </nav>
+    </section>
+
+  <!-- hero section -->
+  <section class="flex flex-col md:flex-row w-full min-h-screen">
+    <!-- left: text -->
+    <div class="w-full md:w-1/2 bg-green-700 p-8 md:p-16 flex flex-col justify-center ">
+      <div class="w-3xl">
+      <h1 class="font-bold text-white font-serif text-3xl md:text-4xl mb-4">Bring Nature to Your <br> Room</h1>
+      <p class="text-white text-base md:text-lg mb-6">Easy-care plants and DIY kits that help you create a <br> peaceful and green living space.</p>
+      <a href="#" class="inline-block bg-orange-500 hover:bg-orange-400 text-white font-bold px-6 py-3 rounded-lg border-2 border-black hover:border-gray-600 transition">Shop Bestsellers</a>
+    </div>
+    </div>
+
+    <!-- right: hero image -->
+    <div class="w-full md:w-1/2 flex items-center justify-center bg-green-50">
+      <img src="./image/banner/hero.png" alt="hero picture" class="w-full h-auto max-w-[520px] object-contain">
+    </div>
+  </section>
+
+  <!-- service and garantee section -->
+  <section class="bg-green-200 flex justify-evenly py-10">
+    <!-- expert Guidance -->
+    <div>
+      <div class="flex">
+        <i class="fa-solid fa-plant-wilt"></i>
+        <p class="font-bold font-serif">Expert Guidance</p>
+      </div>
+      <div>
+        <p>Success starts with choosing the right <br> plants. We'll make sure you do.</p>
+      </div>
+    </div>
+
+    <!-- judgement free service -->
+     <div>
+      <div class="flex">
+        <i class="fa-solid fa-plant-wilt"></i>
+        <p class="font-bold font-serif">Expert Guidance</p>
+      </div>
+      <div>
+        <p>Success starts with choosing the right <br> plants. We'll make sure you do.</p>
+      </div>
+    </div>
+
+
+    <!-- connect and grow -->
+     <div>
+      <div class="flex">
+        <i class="fa-solid fa-plant-wilt"></i>
+        <p class="font-bold font-serif">Expert Guidance</p>
+      </div>
+      <div>
+        <p>Success starts with choosing the right <br> plants. We'll make sure you do.</p>
+      </div>
+    </div>
+  </section>
+  <!-- new arrivals section -->
+
+  <section class="px-4">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">OUR NEW ARRIVALS</h1>
+    </div>
+    
+    <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] mb-[90px]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- testimonial section -->
+<section>
+  <div class="bg-green-300 flex flex-wrap gap-20 p-5 justify-center">
+    <!-- testimonial 1 -->
+    <div class="bg-gray-200 w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] rounded-lg p-4">
+      <div class="flex items-center mb-4">
+        <img class="w-[75px] h-[75px] rounded-full object-cover" src="./image/profile-testimonial/russel.png" alt="russel profile">
+        <p class="ml-4 font-semibold">John Russel</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-700">The qualities of the plants is really good. I get advice from professionals and I became really good at plants</p>
+      </div>
+    </div>
+
+    <!-- testimonial 2 -->
+    <div class="bg-gray-200 w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] rounded-lg p-4">
+      <div class="flex items-center mb-4">
+        <img class="w-[75px] h-[75px] rounded-full object-cover" src="./image/profile-testimonial/russel.png" alt="russel profile">
+        <p class="ml-4 font-semibold">John Russel</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-700">The qualities of the plants is really good. I get advice from professionals and I became really good at plants</p>
+      </div>
+    </div>
+
+    <!-- testimonial 3 -->
+    <div class="bg-gray-200 w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] rounded-lg p-4">
+      <div class="flex items-center mb-4">
+        <img class="w-[75px] h-[75px] rounded-full object-cover" src="./image/profile-testimonial/russel.png" alt="russel profile">
+        <p class="ml-4 font-semibold">John Russel</p>
+      </div>
+      <div>
+        <p class="text-sm text-gray-700">The qualities of the plants is really good. I get advice from professionals and I became really good at plants</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- popular plants section -->
+<section class="px-4">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Our most popular plants.</h1>
+    </div>
+    
+    <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+    <!-- Product four -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product five -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product six -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] mb-[90px]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- help and contact section -->
+<section class="bg-green-300 flex flex-row justify-evenly items-center py-10 gap-10">
+  <!-- text at the left hand-side -->
+  <div class="flex flex-col gap-7 ml-10">
+    <p class="font-serif ">Speak to our plant specialist!</p>
+    <h1 class="font-bold font-serif text-4xl">Need Help?</h1>
+    <p class="font-serif">We will help you with personalizing your plants base on <br> your home condition, your interest, your level of <br> experience base on your current information <br> </p>
+  </div>
+  <!-- contact button at the right hand-side -->
+  <div class="flex flex-col sm:flex-row gap-6 m-10 mr-5">
+    <div class="bg-gray-50 p-6 rounded-lg text-center min-w-[150px] hover:shadow-lg transition flex flex-col items-center justify-center">
+      <i class="fa-regular fa-message text-3xl mb-3"></i>
+      <p class="font-bold">Chat</p>
+      <p class="text-sm text-gray-600">DM our plants experts</p>
+    </div>
+    
+    <div class="bg-gray-50 p-6 rounded-lg text-center min-w-[150px] hover:shadow-lg transition flex flex-col items-center justify-center">
+      <i class="fa-solid fa-phone text-3xl mb-3"></i>
+      <p class="font-bold">Call</p>
+      <p class="text-sm text-gray-600">Live call with us right now!</p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg text-center min-w-[150px] hover:shadow-lg transition flex flex-col items-center justify-center">
+      <i class="fa-regular fa-envelope text-3xl mb-3"></i>
+      <p class="font-bold">Email</p>
+      <p class="text-sm text-gray-600">Mail us a  note to pshop@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- category section -->
+<section>
+ <!-- Header -->
+    <div class="mb-8">
+      <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Plants for everyone.</h1>
+    </div>
+
+    <!-- indoor plants -->
+    <div>
+      <div class="flex">
+        <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Indoor Plants</h1>
+        <i class="fa-solid fa-arrow-right mt-[15px] w-1.5 mr-1"></i>
+      </div>
+      <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] ">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+    </div>
+
+
+  <!-- outdoor plant -->
+   <div>
+      <div class="flex">
+        <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Outdoor plants</h1>
+        <i class="fa-solid fa-arrow-right mt-[15px] w-1.5 mr-1"></i>
+      </div>
+      <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+    </div>
+
+    <!-- plants kit and accessories -->
+     <div>
+      <div class="flex">
+        <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Plant kits and accessories</h1>
+        <i class="fa-solid fa-arrow-right mt-[15px] w-1.5 mr-1"></i>
+      </div>
+      <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] ">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+    </div>
+    <!-- seeds -->
+    <div>
+      <div class="flex">
+        <h1 class="font-serif font-bold text-4xl text-black text-center md:text-left">Seeds</h1>
+        <i class="fa-solid fa-arrow-right mt-[15px] w-1.5 mr-1"></i>
+      </div>
+      <!-- Products Container -->
+    <div class="flex flex-wrap gap-20 p-5 justify-center">
+      <!-- Product One -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Two -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)]">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+      </div>
+
+      <!-- Product Three -->
+      <div class="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(30%-0.75rem)] ">
+        <img src="./image/products/pothos.png" alt="golden pothos plants" class="w-full">
+        <div class="bg-gray-300 p-4">
+          <p class="text-base font-medium">Golden Pothos</p>
+          <p class="text-sm italic text-gray-500 mt-2">The easiest to take care of plants</p>
+          <p class="text-green-600 mt-2">From <span class="line-through">$10</span> to $6</p>
+        </div>
+    </div>
+  
+</section>
+
+<!-- footer -->
+ <footer class="bg-gray-300 rounded-lg flex">
+    <div class="container mx-auto px-6 py-8">
+      <div class="flex flex-col lg:flex-row justify-between gap-8">
+        
+        <!-- Links Section -->
+        <div class="flex flex-col sm:flex-row gap-8 lg:gap-12">
+          
+          <!-- Customer Service -->
+          <div class="space-y-3">
+            <h3 class="font-bold text-gray-800 text-lg">Customer Service</h3>
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">FAQ</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Shipping & Handling</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Resources -->
+          <div class="space-y-3">
+            <h3 class="font-bold text-gray-800 text-lg">Resources</h3>
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Plant Care Guide</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Blog</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">About Us</a>
+            </nav>
+          </div>
+
+          <!-- My Order -->
+          <div class="space-y-3">
+            <h3 class="font-bold text-gray-800 text-lg">My Order</h3>
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Track Order</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Returns</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Order History</a>
+            </nav>
+          </div>
+          
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="lg:max-w-md space-y-4">
+          <p class="text-gray-700 leading-relaxed">
+            Get plant care tips, exclusive offers, and 10% off your first order straight to your inbox. No spam ever.
+          </p>
+          
+          <form class="flex flex-col sm:flex-row gap-2">
+            <input 
+              type="email" 
+              placeholder="Your email here..." 
+              class="flex-1 px-4 py-2 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              required
+            >
+            <button 
+              type="submit" 
+              class="px-6 py-2 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 transition-colors whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
