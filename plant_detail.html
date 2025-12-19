@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="bg-green-300 flex justify-between items-center px-8 py-4 shadow-lg">
+        <!-- menu button (mobile) -->
+        <button id="menuBtn" class="md:hidden text-2xl hover:opacity-70 transition">
+            <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- logo -->
+        <div class="w-24">
+            <img src="./image/banner/logo.png" alt="logo of the shop" class="w-full h-auto">
+        </div>
+
+        <!-- search bar -->
+        <div class="flex-1 mx-8 max-w-md w-1/2">
+            <input type="text" placeholder="Search for plants..."
+                class="w-full px-4 py-2 rounded-md border-2 border-black focus:outline-none focus:ring-2 py-3 px-3 text-sm">
+        </div>
+
+        <!-- navigation icons -->
+        <div class="flex gap-6 text-xl">
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- mobile dropdown menu -->
+    <div id="dropdownMenu" class="hidden md:hidden bg-white shadow-lg">
+        <ul class="flex flex-col gap-0">
+            <li><a href="#"
+                    class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Holidays/Gifts</a>
+            </li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Plants
+                    Kit</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Best
+                    Selling</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition">Plants Tips</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- navigation bar (desktop) -->
+    <section class="hidden md:block">
+        <nav>
+            <ul class="flex justify-center gap-8 bg-gray-200 py-4 shadow-md">
+                <li><a href="#" class="hover:text-green-700 transition">Holidays/Gifts</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Plants Kit</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Best Selling</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Plants Tips</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- plant detail -->
+    <section class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 text-white p-4">
+            <img src="image/products/lucky_plant.png" alt="lucky plant picture">
+        </div>
+        <!-- plant detail -->
+        <div class="w-full md:w-1/2 bg-gray-100  p-4">
+            <h1 class="font-semibold font-serif text-3xl">Money Lucky Plant</h1>
+            <!-- five stars -->
+            <div class="flex gap-2">
+                <div class="gap-1">
+                    <i class="fa-solid fa-star text-green-500"></i>
+                    <i class="fa-solid fa-star text-green-500"></i>
+                    <i class="fa-solid fa-star text-green-500"></i>
+                    <i class="fa-solid fa-star text-green-500"></i>
+                    <i class="fa-solid fa-star text-green-500"></i>
+                </div>
+                <p class="bold">|</p>
+                <p>Review</p>
+            </div>
+
+            <div>
+                <p class="text-sm italic text-gray-500 mt-2">With glossy, dark foliage and upright growth, the Ficus
+                    Burgundy Rubber Plant <br> brings dramatic greenery indoors while thriving on low-maintenance care
+                    in <br> moderate to bright light.</p>
+            </div>
+            <p>size:</p>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div
+                    class="size-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-4 px-6 rounded-xl border-2 border-gray-400 transition-all">
+                    Big</div>
+                <div
+                    class="size-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-4 px-6 rounded-xl border-2 border-gray-400 transition-all">
+                    Medium</div>
+                <div
+                    class="size-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-4 px-6 rounded-xl border-2 border-gray-400 transition-all">
+                    Small</div>
+                <div
+                    class="grid grid-cols-3 gap-0 mb-6 bg-gray-200 rounded-xl border-2 border-gray-400 overflow-hidden">
+                    <button id="decreaseBtn p-4"
+                        class="bg-green-300 hover:bg-green-400 text-gray-800 font-bold py-4 text-2xl transition-colors">
+                        −
+                    </button>
+                    <div class="bg-gray-200 flex items-center justify-center">
+                        <span id="quantity" class="text-2xl font-semibold text-gray-800">1</span>
+                    </div>
+                    <button id="increaseBtn"
+                        class="bg-green-300 hover:bg-green-400 text-gray-800 font-bold py-4 text-2xl transition-colors">
+                        +
+                    </button>
+                </div>
+
+
+                <div class="grid grid-cols-[1fr_auto] gap-4 items-center">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors">Add to cart</button>
+                    <i class="fa-regular fa-heart text-green-500"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>
