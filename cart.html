@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="bg-green-300 flex justify-between items-center px-8 py-4 shadow-lg">
+        <!-- menu button (mobile) -->
+        <button id="menuBtn" class="md:hidden text-2xl hover:opacity-70 transition">
+            <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- logo -->
+        <div class="w-24">
+            <img src="./image/banner/logo.png" alt="logo of the shop" class="w-full h-auto">
+        </div>
+
+        <!-- search bar -->
+        <div class="flex-1 mx-8 max-w-md w-1/2">
+            <input type="text" placeholder="Search for plants..."
+                class="w-full px-4 py-2 rounded-md border-2 border-black focus:outline-none focus:ring-2 py-3 px-3 text-sm">
+        </div>
+
+        <!-- navigation icons -->
+        <div class="flex gap-6 text-xl">
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="hover:text-green-700 transition"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- mobile dropdown menu -->
+    <div id="dropdownMenu" class="hidden md:hidden bg-white shadow-lg">
+        <ul class="flex flex-col gap-0">
+            <li><a href="#"
+                    class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Holidays/Gifts</a>
+            </li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Plants
+                    Kit</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition border-b">Best
+                    Selling</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-green-100 hover:text-green-700 transition">Plants Tips</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- navigation bar (desktop) -->
+    <section class="hidden md:block">
+        <nav>
+            <ul class="flex justify-center gap-8 bg-gray-200 py-4 shadow-md">
+                <li><a href="#" class="hover:text-green-700 transition">Holidays/Gifts</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Plants Kit</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Best Selling</a></li>
+                <li><a href="#" class="hover:text-green-700 transition">Plants Tips</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- cart -->
+    <section class="bg-gray-100">
+        <div class="min-h-screen p-4 md:p-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl font-bold mb-8 font-serif underline">Shopping Cart</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Cart Items Section -->
+                <div class="lg:col-span-2 space-y-4">
+                    <!-- Item 1: Money Lucky Plant -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6">
+                        <div class="grid grid-cols-[100px_1fr] md:grid-cols-[120px_1fr] gap-4">
+                            <!-- Product Image -->
+                            <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1509937528035-ad76254b0356?w=400" 
+                                    alt="Money Lucky plant"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <!-- Product Details -->
+                            <div class="flex flex-col justify-between">
+                                <div>
+                                    <h2 class="text-xl md:text-2xl font-bold mb-1">Money Lucky plant</h2>
+                                    <p class="text-gray-600 italic mb-3">Large</p>
+                                    <button class="text-sm text-gray-500 underline transition-colors">
+                                        Remove
+                                    </button>
+                                </div>
+
+                                <!-- Quantity Controls and Price -->
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
+                                    <div class="inline-flex border-2 border-gray-300 rounded-lg overflow-hidden w-fit">
+                                        <button class="px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 font-semibold transition-colors">
+                                            -
+                                        </button>
+                                        <div class="px-4 py-2 bg-white border-x-2 border-gray-300 min-w-[50px] text-center">
+                                            1
+                                        </div>
+                                        <button class="px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 font-semibold transition-colors">
+                                            +
+                                        </button>
+                                    </div>
+                                    <div class="text-xl font-semibold">10$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Peace Lily -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 md:p-6">
+                        <div class="grid grid-cols-[100px_1fr] md:grid-cols-[120px_1fr] gap-4">
+                            <!-- Product Image -->
+                            <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?w=400" 
+                                    alt="Peace Lily"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            <!-- Product Details -->
+                            <div class="flex flex-col justify-between">
+                                <div>
+                                    <h2 class="text-xl md:text-2xl font-bold mb-1">Peace Lily</h2>
+                                    <p class="text-gray-600 italic mb-3">Medium</p>
+                                    <button class="text-sm text-gray-500  underline transition-colors">
+                                        Remove
+                                    </button>
+                                </div>
+
+                                <!-- Quantity Controls and Price -->
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-4">
+                                    <div class="inline-flex border-2 border-gray-300 rounded-lg overflow-hidden w-fit">
+                                        <button class="px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 font-semibold transition-colors">
+                                            -
+                                        </button>
+                                        <div class="px-4 py-2 bg-white border-x-2 border-gray-300 min-w-[50px] text-center">
+                                            1
+                                        </div>
+                                        <button class="px-4 py-2 bg-white hover:bg-gray-100 text-gray-700 font-semibold transition-colors">
+                                            +
+                                        </button>
+                                    </div>
+                                    <div class="text-xl font-semibold">10$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Section -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-100 rounded-lg shadow-sm p-6 lg:sticky lg:top-4">
+                        <h2 class="text-2xl font-bold mb-6">Total summary</h2>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-gray-700">
+                                <span>Money Lucky plant</span>
+                                <span>10$</span>
+                            </div>
+                            
+                            <div class="flex justify-between text-gray-700">
+                                <span>Peace lily</span>
+                                <span>10$</span>
+                            </div>
+                            
+                            <div class="flex justify-between text-gray-700">
+                                <span>Shipping</span>
+                                <span class="italic">Free</span>
+                            </div>
+                            
+                            <div class="flex justify-between text-gray-700">
+                                <span>Tax</span>
+                                <span>2$</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t-2 border-gray-300 pt-4 mb-6">
+                            <div class="flex justify-between text-xl font-bold">
+                                <span>Total:</span>
+                                <span>22$</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors">
+                            Proceed to secure check out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
